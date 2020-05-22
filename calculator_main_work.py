@@ -1,6 +1,3 @@
-initialise 'held object' as 0
-initialise 'held equation' as 0
-
 heldObject = None
 heldEquation = None
 
