@@ -1,8 +1,8 @@
 initialise 'held object' as 0
 initialise 'held equation' as 0
 
-heldObject = null
-heldEquation = null
+heldObject = None
+heldEquation = None
 
 """
 # first user input
