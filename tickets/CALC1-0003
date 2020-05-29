@@ -1,9 +1,3 @@
 CALC1-0003 Create method of holding onto user inputs
 
 Finalise method of holding user inputs for use by functions
-
-* Create heldObject
-* Create heldEquation
-
-E.g. for proper use of a calculator, the first number is input THEN the operator is specified, 
-then another number is input and so on, until the equals function is used

@@ -1,1 +1,4 @@
-CALC1-0004 Create equality function (display answer)
+CALC1-0004 Write imports and declare variables
+
+Import from tkinter and declare the heldExpression variable (global)
+

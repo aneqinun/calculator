@@ -1,4 +1,16 @@
-CALC1-0001 Add display for GUI
+CALC1-0001 Basic concept
 
-Basic calculator gui with numpad, +, -, *, /, = keys
-Display numbers as they are input
+Functions for:
+* Number button press
+* Clear button press
+* Equals button press
+
+GUI:
+* Numbers 1-9
+* Clear / C button
+* Equals button
+* Operator buttons +,-,=,*,/
+
+Variables:
+* heldExpression - holds the expression to be evaluated upon 'equals' press
+
