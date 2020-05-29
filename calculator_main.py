@@ -45,29 +45,21 @@ def clear():
 
 # Driver code
 if __name__ == "__main__":
-    # create a GUI window
+    # create window
     gui = Tk()
 
-    # set the background colour of GUI window
+    # set the window colour, title, dimensions
     gui.configure(background="gainsboro")
-
-    # set the title of GUI window
     gui.title("Calculator")
-
-    # set the configuration of GUI window
     gui.geometry("490x270")
 
-    # StringVar() is the variable class
-    # we create an instance of this class
+    # create instance of StringVar()
     equation = StringVar()
 
-    # create the text entry box for
-    # showing the heldExpression
+    # create user entry box to show heldExpression
     heldExpression_field = Entry(gui, textvariable=equation)
 
-    # grid method is used for placing
-    # the widgets at respective positions
-    # in table like structure .
+    # apply grid method to place buttons
     heldExpression_field.grid(columnspan=8, ipadx=153)
 
     # start the GUI
