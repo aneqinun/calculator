@@ -1,40 +1,44 @@
-def add(x,y):
-    return x + y
+# import everything from tkinter
+from tkinter import *
 
-def subtract(x,y):
-    return x -y
+# declare the heldExpression variable
+heldExpression = ""
 
-def multiply(x,y):
-    return x * y
+# update heldExpression in the input box on press
+def press(number):
+    global heldExpression
 
-def divide(x,y):
-    return x / y
+    # append to heldExpression on press
+    heldExpression = heldExpression + str(number)
 
-print("Select operation.")
-print ("Option 1: Add")
-print ("Option 2: Subtract")
-print ("Option 3: Multiply")
-print ("Option 4: Divide")
+    # set heldExpression
+    equation.set(heldExpression)
 
-while True:
 
-    choice = input("Enter choice (1/2/3/4): ")
+# evaluate heldExpression on equals press
+def equalpress():
 
-    if choice in ('1','2','3','4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
 
-        if choice == '1':
-            print(num1, '+', num2, '=', add(num1,num2))
+    try:
 
-        elif choice == '2':
-            print(num1, '-', num2, '=', subtract(num1,num2))
+        global heldExpression
 
-        elif choice == '3':
-            print(num1, '*', num2, '=', multiply(num1,num2))
+        # evaluate heldExpression, str function converts result to string
+        total = str(eval(heldExpression))
+        equation.set(total)
 
-        elif choice == '4':
-            print(num1, '/', num2, '=', divide(num1,num2))
+        # initialze heldExpression to empty string
+        heldExpression = ""
 
-    else:
-        print("Invalid input: ", choice)
+    # handles evaluation errors such as division by zero
+    except:
+
+        equation.set(" error ")
+        heldExpression = ""
+
+
+# Clear input box to empty string
+def clear():
+    global heldExpression
+    heldExpression = ""
+    equation.set("")
